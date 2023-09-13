@@ -27,7 +27,7 @@ function draw() {
     rectY = windowHeight/3;
     eyeX1 = rectX + rectWidth/4;
     eyeX2 = rectX + rectWidth/4*3;
-    eyeY = rectY + rectWidth/5*2;
+    eyeY = rectY + rectHeight/5*2;
     mouthX = rectX + rectWidth/2;
     mouthY = rectY + rectWidth/5*3;
 
@@ -50,7 +50,13 @@ function draw() {
     triangle(mouthX, rectY + rectWidth, rectX, rectY + rectHeight * 2, rectX + rectWidth, rectY + rectHeight * 2)
 
     // Draw legs
-    
+    strokeWeight(4);
+    line(eyeX1, rectY + 2*rectHeight, eyeX1, rectY + 2*rectHeight + 100);
+    line(eyeX2, rectY + 2*rectHeight, eyeX2, rectY + 2*rectHeight + 100);
+
+    // Draw limbs
+    line(eyeX1 - 50, rectY + 1.5*rectHeight, eyeX1, rectY + 1.5*rectHeight);
+    line(eyeX2, rectY + 1.5*rectHeight, eyeX2 + 50, rectY + 1.5*rectHeight);
 
     // Free circle
     strokeWeight(10);
