@@ -1,6 +1,6 @@
 function setup() {
     // Only run once: define the canvas, open some files, define the colors, ...
-    createCanvas(600, 600); // w, h
+    createCanvas(windowWidth, windowHeight); // w, h
     background(123,30,90,120); // rgba
 }
 
