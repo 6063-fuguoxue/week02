@@ -62,4 +62,36 @@ function draw() {
     strokeWeight(10);
     fill(14,135,204, 150);
     ellipse(x, y, 30, 30); 
+
+    // Replicate a figure
+    translate(-rectWidth, 0);
+    strokeWeight(4);
+
+    // Draw a rectangle face
+    fill(255, 165, 0, 150);
+    
+    rect(rectX, rectY, rectWidth, rectWidth);
+    // Draw eyes
+    stroke(0, 23, 90, 150);
+    fill(0);
+    ellipse(eyeX1, eyeY, 30, 30); 
+    ellipse(eyeX2, eyeY, 30, 30); 
+
+    // Draw a mouth
+    fill(255, 0, 0, 150);
+    arc(mouthX, mouthY, 50, 50, 0, PI);
+
+    // Draw a body
+    fill(255);
+    triangle(mouthX, rectY + rectWidth, rectX, rectY + rectHeight * 2, rectX + rectWidth, rectY + rectHeight * 2)
+
+    // Draw legs
+    strokeWeight(4);
+    line(eyeX1, rectY + 2*rectHeight, eyeX1, rectY + 2*rectHeight + 100);
+    line(eyeX2, rectY + 2*rectHeight, eyeX2, rectY + 2*rectHeight + 100);
+
+    // Draw limbs
+    line(eyeX1 - 50, rectY + 1.5*rectHeight, eyeX1, rectY + 1.5*rectHeight);
+    line(eyeX2, rectY + 1.5*rectHeight, eyeX2 + 50, rectY + 1.5*rectHeight);
+
 }
